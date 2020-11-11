@@ -11,13 +11,19 @@
 </head>
 
 <body>
-
-    <div class="header">
+    <!--Barra de navegación-->
+    <ul id="nav">
+        <li><a href="#header">Welcome</a></li>
+        <li><a href="#section-1">Programs</a></li>
+        <li><a href="#section-2">Innovative</a></li>
+        <li><a href="#section-3">Potencial</a></li>
+    </ul>
+    <div class="header" id="header">
         <h1>Welcome to</h1>
         <h1>the creative after-school</h1>
     </div>
     <!--SECTION 1-->
-    <div class="row">
+    <div class="row" id="section-1">
         <div class="two-column">
             <h1>Our enrichment programs boost your kid to a brighter future</h1>
             <p>Embark your kid into an inspirational journey of fun and discovery throught a hands-on approach.</p>
@@ -27,8 +33,8 @@
         </div>
     </div>
     <!--SECTION 2-->
-    <div class="row">
-        <div class="one-column" id="section-2">
+    <div class="row" id="section-2">
+        <div class="one-column">
             <h1>Innovative programs for ages 6 to 13.</h1>
             <div class="four-column">
                 <h4>Robotics</h4>
@@ -49,7 +55,7 @@
         </div>
     </div>
     <!--SECTION 3-->
-    <div class="row">
+    <div class="row" id="section-3">
         <div class="two-column">
             <img src="img/section-3.png" alt="imagen de la seccion 3">
         </div>
@@ -94,6 +100,20 @@
             <p>The Studio</p>
         </div>
     </div>
+    <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("nav").style.backgroundColor = "white";
+            } else {
+                document.getElementById("nav").style.backgroundColor = "rgba(0,0,0,0.0)";
+            }
+        }
+    </script>
 </body>
 
 </html>
